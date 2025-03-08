@@ -1,0 +1,18 @@
+syntax="proto3";
+
+/*
+	客户端发送MyRequest,服务端接收到后返回MyResponse
+*/
+service Myservice{
+	rpc MyMethod(MyRequest) returns (MyResponse);
+}
+message MyRequest{
+	string count=1;
+	string name=2;
+	string step=3;
+	string description =4;
+}
+
+message MyResponse{
+	string message =1;
+}
